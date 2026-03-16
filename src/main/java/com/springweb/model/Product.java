@@ -1,14 +1,15 @@
 package com.springweb.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import org.springframework.stereotype.Component;
 
 @Component
 @Entity
+@Table(name = "products")
 public class Product {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int prodId;
     private String  prodName;
     private int price;
