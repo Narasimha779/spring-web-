@@ -25,6 +25,7 @@ public class ProductController {
 
     @PostMapping("/products")
     public void addProduct(@RequestBody Product prod){
+
         services.addProduct(prod);
     }
     @PutMapping("/products")
